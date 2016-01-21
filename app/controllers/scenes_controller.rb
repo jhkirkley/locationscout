@@ -25,6 +25,7 @@ class ScenesController < ApplicationController
   # POST /scenes.json
   def create
     @scene = Scene.new(scene_params)
+    @scene.user = current_user       # associate the new todo to the current_user
 
     respond_to do |format|
       if @scene.save
@@ -69,6 +70,6 @@ class ScenesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scene_params
-      params.require(:scene).permit(:name)
+      params.require(:scene).permit(:name, :description, :movie_id, :address, :city, :state, :zip)
     end
 end

@@ -2,6 +2,9 @@ class StaticPagesController < ApplicationController
   def home
   end
 
+  def around
+  end
+
   def about
   end
 
