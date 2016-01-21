@@ -1,7 +1,7 @@
 <div class="page-header">
   <%= link_to scenes_path, class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
-    Back
+    List
   <% end %>
   <%= link_to edit_scene_path(@scene), class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-pencil"></span>
@@ -13,5 +13,19 @@
 <dl class="dl-horizontal">
   <dt>Name:</dt>
   <dd><%= @scene.name %></dd>
+  <dt>Description:</dt>
+  <dd><%= @scene.description %></dd>
+  <dt>Address:</dt>
+  <dd><%= @scene.address %></dd>
+  <dt>City:</dt>
+  <dd><%= @scene.city %></dd>
+  <dt>State:</dt>
+  <dd><%= @scene.state %></dd>
+  <dt>Zip:</dt>
+  <dd><%= @scene.zip %></dd>
+  <dt>Scene Shot:</dt>
+  <dd><%= image_tag @scene.scene_shot.url(:poster) %></dd>
+  <dt>Location Shot:</dt>
+  <dd><%= image_tag @scene.location_shot.url(:poster) %></dd>
 
 </dl>

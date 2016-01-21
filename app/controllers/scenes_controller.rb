@@ -70,6 +70,6 @@ class ScenesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scene_params
-      params.require(:scene).permit(:name, :description, :movie_id, :address, :city, :state, :zip)
+      params.require(:scene).permit(:name, :description, :movie_id, :address, :city, :state, :zip, :scene_shot, :location_shot)
     end
 end
