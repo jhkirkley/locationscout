@@ -4,6 +4,7 @@ class CreateScenes < ActiveRecord::Migration
       t.string :name
       t.references :user, index: true, foreign_key: true
       t.references :movie, index: true, foreign_key: true
+      t.text :description
       t.string :address
       t.string :city
       t.string :state
@@ -14,5 +15,8 @@ class CreateScenes < ActiveRecord::Migration
       t.float :longitude
       t.timestamps null: false
     end
+    add_index :scenes, [:user_id, :created_at]
   end
 end
+
+
