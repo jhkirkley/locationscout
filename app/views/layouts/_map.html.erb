@@ -6,8 +6,25 @@ function initMap() {
   var pos;
  var map = new google.maps.Map(document.getElementById('map'), {
     center: pos,
-    zoom: 8
+    zoom: 12
   });
+
+ var coords = <%= @coords_array.to_json.html_safe %>
+ console.log(coords);
+
+ for (var i = 0; i < coords.length; i++) {
+        var data = coords[i];
+        var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+        var icon_color = 'https://maps.google.com/mapfiles/ms/icons/green-dot.png';
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: data.name,
+            icon: icon_color
+        });
+      }
+
  // Try HTML5 geolocation.
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
