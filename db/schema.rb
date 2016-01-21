@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160121054816) do
+ActiveRecord::Schema.define(version: 20160121134511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,8 +49,16 @@ ActiveRecord::Schema.define(version: 20160121054816) do
     t.string   "icon"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "scene_shot_file_name"
+    t.string   "scene_shot_content_type"
+    t.integer  "scene_shot_file_size"
+    t.datetime "scene_shot_updated_at"
+    t.string   "location_shot_file_name"
+    t.string   "location_shot_content_type"
+    t.integer  "location_shot_file_size"
+    t.datetime "location_shot_updated_at"
   end
 
   add_index "scenes", ["movie_id"], name: "index_scenes_on_movie_id", using: :btree
@@ -70,6 +78,10 @@ ActiveRecord::Schema.define(version: 20160121054816) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
