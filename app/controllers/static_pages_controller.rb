@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def around
+    @coords_array = Scene.get_scene_coords
   end
 
   def about
