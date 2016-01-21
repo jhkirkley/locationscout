@@ -1,5 +1,8 @@
 class Scene < ActiveRecord::Base
-validates :title, presence: true
+   belongs_to :user
+   belongs_to :movie
+   validates :user_id, presence: true
+   validates :name, presence: true
 
   before_save :default_values
 

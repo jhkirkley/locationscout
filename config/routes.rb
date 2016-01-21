@@ -1,10 +1,34 @@
 Rails.application.routes.draw do
+  get 'movies/index'
+
+  get 'movies/show'
+
+  get 'movies/edit'
+
+  get 'movies/update'
+
   root to: 'static_pages#home'
   match '/about', to: 'static_pages#about', via: 'get'
   match '/about', to: 'static_pages#help', via: 'get'
   match '/about', to: 'static_pages#contact', via: 'get'
   devise_for :users
-  resources :scenes
+
+  #resources :scenes
+  get 'scenes/'          => 'scenes#index', as: :scenes
+  get 'scenes/new'       => 'scenes#new', as: :new_scene
+  post 'scenes/'         => 'scenes#create'
+  get 'scenes/:id'       => 'scenes#show',  as: :scene
+  get 'scenes/:id/edit'  => 'scenes#edit', as: :edit_scene
+  patch 'scenes/:id'     => 'scenes#update'
+  delete 'scenes/:id'    => 'scenes#destroy'
+
+  get 'movies/'          => 'movies#index', as: :movies
+  get 'movies/new'       => 'movies#new', as: :new_movie
+  post 'movies/'         => 'movies#create'
+  get 'movies/:id'       => 'movies#show',  as: :movie
+  get 'movies/:id/edit'  => 'movies#edit', as: :edit_movie
+  patch 'movies/:id'     => 'movies#update'
+  delete 'movies/:id'    => 'movies#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

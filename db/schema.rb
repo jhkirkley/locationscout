@@ -11,33 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120202122) do
+ActiveRecord::Schema.define(version: 20160121001540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "movies", force: :cascade do |t|
-    t.string  "title"
-    t.integer "year"
-    t.string  "rated"
-    t.string  "runtime"
-    t.string  "genre"
-    t.string  "director"
-    t.string  "writer"
-    t.text    "actors",     default: [], array: true
-    t.text    "plot"
-    t.string  "country"
-    t.text    "awards",     default: [], array: true
-    t.string  "imdbRating"
-    t.string  "imdbID"
+    t.string   "title"
+    t.integer  "year"
+    t.string   "rated"
+    t.string   "runtime"
+    t.string   "genre"
+    t.string   "director"
+    t.string   "writer"
+    t.text     "actors",              default: [], array: true
+    t.text     "plot"
+    t.string   "country"
+    t.text     "awards",              default: [], array: true
+    t.string   "imdbRating"
+    t.string   "imdbID"
+    t.string   "poster_file_name"
+    t.string   "poster_content_type"
+    t.integer  "poster_file_size"
+    t.datetime "poster_updated_at"
   end
 
   create_table "scenes", force: :cascade do |t|
     t.string   "name"
-    t.string   "movie_id"
-    t.string   "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "movie_id"
     t.string   "address"
     t.string   "city"
     t.string   "state"
@@ -46,7 +48,12 @@ ActiveRecord::Schema.define(version: 20160120202122) do
     t.string   "icon"
     t.float    "latitude"
     t.float    "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
+  add_index "scenes", ["movie_id"], name: "index_scenes_on_movie_id", using: :btree
+  add_index "scenes", ["user_id"], name: "index_scenes_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -66,4 +73,6 @@ ActiveRecord::Schema.define(version: 20160120202122) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "scenes", "movies"
+  add_foreign_key "scenes", "users"
 end

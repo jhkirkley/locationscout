@@ -1,0 +1,24 @@
+<div class="page-header">
+  <%= link_to movies_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_movie_path(@movie), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show movie</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @movie.title %></dd>
+  <dt>Year:</dt>
+  <dd><%= @movie.year %></dd>
+  <dt>Director:</dt>
+  <dd><%= @movie.director %></dd>
+  <dt>Plot:</dt>
+  <dd><%= @movie.plot %></dd>
+  <dt>Poster:</dt>
+  <dd><%= image_tag @movie.poster.url(:poster) %></dd>
+</dl>
