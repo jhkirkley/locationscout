@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
-  get 'movies/index'
-
-  get 'movies/show'
-
-  get 'movies/edit'
-
-  get 'movies/update'
+  #get 'movies/index'
+  #get 'movies/show'
+  #get 'movies/edit'
+  #get 'movies/update'
 
   root to: 'static_pages#home'
   match '/about', to: 'static_pages#about', via: 'get'
-  match '/about', to: 'static_pages#help', via: 'get'
-  match '/about', to: 'static_pages#contact', via: 'get'
+  match '/help', to: 'static_pages#help', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/around', to: 'static_pages#around', via: 'get'
   devise_for :users
 
   #resources :scenes
