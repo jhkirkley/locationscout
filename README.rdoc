@@ -1,5 +1,11 @@
-# H1 Location Scout
+# Location Scout
 
-# H2 find places where movie and television shows have been filmed near you.
+### Ruby on Rails application for General Assembly Project Two
+
+ January 22, 2016
+
+### Find places where movie and television shows have been filmed near you.
+
+
 
 
