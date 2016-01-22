@@ -13,7 +13,7 @@
             <th>Name</th>
             <th>Show</th>
             <th>Edit</th>
-            <th>Destroy</th>
+            <th>Delete</th>
       </tr>
     </thead>
 
@@ -22,7 +22,7 @@
             <td><%= scene.name %></td>
             <td><%= link_to 'Show', scene %></td>
         <td><%= link_to 'Edit', edit_scene_path(scene) %></td>
-        <td><%= link_to 'Destroy', scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tbody>
   </table>
