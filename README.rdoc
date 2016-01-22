@@ -1,4 +1,4 @@
-# Location Scout #
+# Location Scout
 
 ### Ruby on Rails application for General Assembly Project Two ##
 
