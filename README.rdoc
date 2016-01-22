@@ -1,10 +1,10 @@
-# Location Scout
+# Location Scout #
 
-### Ruby on Rails application for General Assembly Project Two
+### Ruby on Rails application for General Assembly Project Two ##
 
  January 22, 2016
 
-### Find places where movie and television shows have been filmed near you.
+### Find places where movie and television shows have been filmed near you. ###
 
 
 
