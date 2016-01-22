@@ -44,6 +44,17 @@ main {
     text-decoration: none;
   }
 }
+#ryan {
+}
+#aboutcopy {
+  text-align: text-top;
+}
+#about .joe {
+  float: left;
+}
+.clearfix {
+    overflow: auto;
+}
 
 #maprim {
   margin: 10%;
@@ -58,6 +69,7 @@ main {
 /* footer */
 
 footer {
+  clear: left;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
