@@ -1,6 +1,6 @@
 # Location Scout
 
-### Ruby on Rails application for GA Web Development immersive Project Two
+#### Ruby on Rails application for GA Web Development Immersive Project Two
 
  January 22, 2016
 
@@ -26,7 +26,7 @@ clone this repo, cd into the new directory and run **bundle install** and **rail
 
 ## Future development
 
-*create a more flexible schema
+* create a more flexible schema
 
 https://www.draw.io/#G0B1L2qPBxL7GqaTFwNkFaYUo1ekU
 
