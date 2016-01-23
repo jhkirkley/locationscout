@@ -32,7 +32,7 @@ class Scene < ActiveRecord::Base
   validates_attachment_content_type :location_shot, :content_type => /\Aimage\/.*\Z/
   #before_save :default_values
   #geocoder
-  geocoded_by :address
+  geocoded_by :fulladdress
   after_validation :geocode, :if => lambda{ |obj| obj.address_changed? && obj.city_changed? && obj.zip_changed?}
 
   def self.get_scene_coords
@@ -48,9 +48,9 @@ class Scene < ActiveRecord::Base
 
     end
 
-    #def address
-    #    [city, zip, address].compact.join(', ')
-    #end
+    def fulladdress
+        [city, zip, address].compact.join(', ')
+    end
 
   private
   #def default_values
