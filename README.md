@@ -6,6 +6,9 @@
 
 ### Find places where movie and television shows have been filmed near you. ###
 
+## Sampla App
+https://fast-brook-45274.herokuapp.com/around
+
 ## Installation
 clone this repo, cd into the new directory and run **bundle install** and **rails s**
 
