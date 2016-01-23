@@ -1,12 +1,12 @@
 # Location Scout
 
-### Ruby on Rails application for General Assembly Project Two ##
+### Ruby on Rails application for GA Web Development immersive Project Two
 
  January 22, 2016
 
-### Find places where movie and television shows have been filmed near you. ###
+### Find places where movie and television shows have been filmed near you.
 
-## Sampla App
+## Sample App
 https://fast-brook-45274.herokuapp.com/around
 
 ## Installation
@@ -20,9 +20,9 @@ clone this repo, cd into the new directory and run **bundle install** and **rail
 * Paperclip
 * AWS SDK
 * Geocoder
-# Google Maps API
-# HTML 5 Geolocation
-# HTTParty
+* Google Maps API
+* HTML 5 Geolocation
+* HTTParty
 
 ## Future development
 
