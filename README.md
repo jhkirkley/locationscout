@@ -25,6 +25,7 @@ clone this repo, cd into the new directory and run **bundle install** and **rail
 * HTTParty
 
 ## Future development
+Trello Board: https://trello.com/b/Jc6DBjiE/locationscout
 
 * create a more flexible schema
 
